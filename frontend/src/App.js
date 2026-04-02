@@ -113,88 +113,57 @@ const HeroSection = () => {
   );
 };
 
-// Custom Service Icons
-const ResidentialIcon = () => (
-  <svg viewBox="0 0 80 80" className="w-20 h-20">
-    {/* House outline */}
-    <path d="M40,12 L70,35 L70,70 L10,70 L10,35 Z" fill="none" stroke="#2d5a3d" strokeWidth="2"/>
-    <path d="M40,12 L10,35" fill="none" stroke="#2d5a3d" strokeWidth="2"/>
-    <path d="M40,12 L70,35" fill="none" stroke="#2d5a3d" strokeWidth="2"/>
-    {/* Roof accent */}
-    <polygon points="40,12 70,35 10,35" fill="#f0f7f2"/>
-    {/* Bed */}
-    <rect x="20" y="45" width="40" height="20" rx="3" fill="none" stroke="#2d5a3d" strokeWidth="2"/>
-    <rect x="20" y="45" width="40" height="8" rx="2" fill="#87CEEB"/>
-    <ellipse cx="28" cy="50" rx="5" ry="4" fill="white" stroke="#2d5a3d" strokeWidth="1"/>
-    <ellipse cx="52" cy="50" rx="5" ry="4" fill="white" stroke="#2d5a3d" strokeWidth="1"/>
-    {/* Sparkles */}
-    <text x="58" y="25" fill="#2d5a3d" fontSize="10">✦</text>
-    <text x="65" y="18" fill="#2d5a3d" fontSize="8">✦</text>
-  </svg>
-);
-
-const CarpetIcon = () => (
-  <svg viewBox="0 0 80 80" className="w-20 h-20">
-    {/* Sofa back */}
-    <path d="M10,30 Q10,20 20,20 L60,20 Q70,20 70,30 L70,50 L10,50 Z" fill="#6b7280" stroke="#2d5a3d" strokeWidth="2"/>
-    {/* Sofa seat */}
-    <rect x="8" y="45" width="64" height="18" rx="3" fill="#9ca3af" stroke="#2d5a3d" strokeWidth="2"/>
-    {/* Armrests */}
-    <rect x="5" y="35" width="12" height="30" rx="4" fill="#6b7280" stroke="#2d5a3d" strokeWidth="2"/>
-    <rect x="63" y="35" width="12" height="30" rx="4" fill="#6b7280" stroke="#2d5a3d" strokeWidth="2"/>
-    {/* Cushion lines */}
-    <line x1="30" y1="25" x2="30" y2="45" stroke="#2d5a3d" strokeWidth="1"/>
-    <line x1="50" y1="25" x2="50" y2="45" stroke="#2d5a3d" strokeWidth="1"/>
-    {/* Legs */}
-    <rect x="15" y="63" width="6" height="8" fill="#2d5a3d"/>
-    <rect x="59" y="63" width="6" height="8" fill="#2d5a3d"/>
-  </svg>
-);
-
-const SpecializedIcon = () => (
-  <svg viewBox="0 0 80 80" className="w-20 h-20">
-    {/* Hard hat */}
-    <ellipse cx="40" cy="50" rx="30" ry="12" fill="#f59e0b" stroke="#2d5a3d" strokeWidth="2"/>
-    <path d="M15,50 Q15,25 40,20 Q65,25 65,50" fill="#fbbf24" stroke="#2d5a3d" strokeWidth="2"/>
-    <rect x="35" y="45" width="10" height="8" fill="#f59e0b"/>
-    {/* Leaf decoration */}
-    <ellipse cx="60" cy="35" rx="10" ry="15" fill="#2d5a3d" transform="rotate(30 60 35)"/>
-    <ellipse cx="55" cy="28" rx="8" ry="12" fill="#4a7c59" transform="rotate(20 55 28)"/>
-    <line x1="60" y1="50" x2="55" y2="25" stroke="#1a472a" strokeWidth="2"/>
-  </svg>
-);
-
 // Services Section
 const ServicesSection = () => {
-  const services = [
+  const topServices = [
     {
-      icon: <ResidentialIcon />,
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/7a27afmx_RESIDENTIAL_CLEANING1-removebg-preview.png",
       title: "RESIDENTIAL CLEANING",
       links: ["Deep", "Regular", "Move-in"],
       testId: "service-residential"
     },
     {
-      icon: <CarpetIcon />,
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/hxqmhrul_SOFA-removebg-preview.png",
       title: "CARPET & UPHOLSTERY",
-      links: ["Steam Clean", "Car Seat"],
+      links: ["Steam Clean", "Carpet"],
       testId: "service-carpet"
     },
     {
-      icon: <SpecializedIcon />,
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/eohgl6bu_UTENSILIOS-removebg-preview.png",
       title: "SPECIALIZED",
-      links: ["Post-construction", "Vacation Rental Cleaning"],
+      links: ["Detailed", "Sanitize"],
       testId: "service-specialized"
+    }
+  ];
+
+  const bottomServices = [
+    {
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/i7zrr70m_CARPET-removebg-preview.png",
+      title: "PROFESSIONAL CARPET",
+      links: ["Steam Extraction", "Deep Clean"],
+      testId: "service-pro-carpet"
+    },
+    {
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/zh363hkj_MAT_CLEANING-removebg-preview.png",
+      title: "MAT CLEANING",
+      links: ["Car Interior", "Trunk Mats", "Floor Mats"],
+      testId: "service-mat"
     }
   ];
 
   return (
     <section id="services" className="services-section" data-testid="services-section">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        {/* Top row - 3 services */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+          {topServices.map((service, index) => (
             <div key={index} className="service-card" data-testid={service.testId}>
               <div className="service-icon-wrapper">
-                {service.icon}
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="service-image"
+                />
               </div>
               <h3 className="service-title">{service.title}</h3>
               <div className="service-links">
@@ -207,6 +176,32 @@ const ServicesSection = () => {
                   </span>
                 ))}
                 {index === 0 && " >"}
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Bottom row - 2 services centered */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {bottomServices.map((service, index) => (
+            <div key={index} className="service-card" data-testid={service.testId}>
+              <div className="service-icon-wrapper">
+                <img 
+                  src={service.image} 
+                  alt={service.title}
+                  className="service-image"
+                />
+              </div>
+              <h3 className="service-title">{service.title}</h3>
+              <div className="service-links">
+                {service.links.map((link, i) => (
+                  <span key={i}>
+                    <a href={`#${link.toLowerCase().replace(/\s/g, '-')}`} className="service-link">
+                      {link}
+                    </a>
+                    {i < service.links.length - 1 && " / "}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
