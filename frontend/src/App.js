@@ -249,11 +249,11 @@ const ContactFooter = () => {
             <div className="contact-info" data-testid="contact-info">
               <div className="contact-item">
                 <Phone className="w-5 h-5 text-forest-primary" />
-                <span>+234-556-8890</span>
+                <span>403-679-1671</span>
               </div>
               <div className="contact-item">
                 <Mail className="w-5 h-5 text-forest-primary" />
-                <span>mi-hogar@gmail.com</span>
+                <span>info@homecleaningcanmore.ca</span>
               </div>
               <div className="bilingual-text">
                 Proudly bilingual / Orgullosamente bilingüe.
@@ -272,7 +272,7 @@ const ContactFooter = () => {
 
 // WhatsApp Floating Button
 const WhatsAppButton = () => {
-  const phoneNumber = "2345568890"; // Replace with actual number
+  const phoneNumber = "14036791671"; // Canada phone number
   const message = "Hello! I'm interested in your cleaning services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
