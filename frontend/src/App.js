@@ -117,7 +117,7 @@ const ServicesSection = () => {
       testId: "service-pro-carpet"
     },
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/f0bam41y_MAT_CLEANING1.png",
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l7hpd6bb_car-shark1.png",
       title: "MAT CLEANING",
       links: ["Car Interior", "Trunk Mats", "Floor Mats"],
       testId: "service-mat"
