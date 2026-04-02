@@ -120,7 +120,8 @@ const ServicesSection = () => {
       image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l7hpd6bb_car-shark1.png",
       title: "MAT CLEANING",
       links: ["Car Interior", "Trunk Mats", "Floor Mats"],
-      testId: "service-mat"
+      testId: "service-mat",
+      wider: true
     }
   ];
 
@@ -162,7 +163,7 @@ const ServicesSection = () => {
                 <img 
                   src={service.image} 
                   alt={service.title}
-                  className="service-image"
+                  className={service.wider ? "service-image-wide" : "service-image"}
                 />
               </div>
               <h3 className="service-title">{service.title}</h3>
