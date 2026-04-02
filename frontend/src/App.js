@@ -90,19 +90,19 @@ const HeroSection = () => {
 const ServicesSection = () => {
   const topServices = [
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/3te5mzvb_RESIDENTIAL_CLEANING-removebg-preview.png",
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/15e4oh01_residential1.png",
       title: "RESIDENTIAL CLEANING",
       links: ["Deep", "Regular", "Move-in"],
       testId: "service-residential"
     },
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/h3vydsl1_SOFA-removebg-preview.png",
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/v0wpxzqm_SOFA1.png",
       title: "CARPET & UPHOLSTERY",
       links: ["Steam Clean", "Carpet"],
       testId: "service-carpet"
     },
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/xzgneasw_UTENSILIOS-removebg-preview.png",
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/rbs7d979_UTENSILIOS1.png",
       title: "SPECIALIZED",
       links: ["Detailed", "Sanitize"],
       testId: "service-specialized"
@@ -111,13 +111,13 @@ const ServicesSection = () => {
 
   const bottomServices = [
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/bf82lsvm_CARPET-removebg-preview.png",
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/s3xwyqki_cleaning_carpet1.png",
       title: "PROFESSIONAL CARPET",
       links: ["Steam Extraction", "Deep Clean"],
       testId: "service-pro-carpet"
     },
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/w5c55ks4_MAT_CLEANING-removebg-preview.png",
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/f0bam41y_MAT_CLEANING1.png",
       title: "MAT CLEANING",
       links: ["Car Interior", "Trunk Mats", "Floor Mats"],
       testId: "service-mat"
