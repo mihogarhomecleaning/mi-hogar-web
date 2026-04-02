@@ -190,14 +190,10 @@ const ContactFooter = () => {
     <footer id="local" className="contact-footer-new" data-testid="contact-footer">
       <div className="footer-image-container">
         <img 
-          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/evof9b44_1.jpg"
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/m4dgynsv_1.jpg"
           alt="Canmore location with contact info"
           className="footer-full-image"
         />
-        <div className="footer-contact-overlay">
-          <div className="footer-phone">403-679-1671</div>
-          <div className="footer-email">info@homecleaningcanmore.ca</div>
-        </div>
       </div>
     </footer>
   );
