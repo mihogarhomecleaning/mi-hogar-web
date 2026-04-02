@@ -57,6 +57,12 @@
 }
 
 /* ===== Logo ===== */
+.logo-image {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
 .logo-heart {
   margin-bottom: 0.25rem;
 }

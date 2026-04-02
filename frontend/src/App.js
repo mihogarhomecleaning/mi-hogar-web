@@ -11,52 +11,23 @@ const Navigation = () => {
     <nav className="bg-white py-4 px-6 sticky top-0 z-50 shadow-sm" data-testid="navigation">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Left Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 flex-1">
           <a href="#home" className="nav-link active" data-testid="nav-home">HOME</a>
           <a href="#services" className="nav-link" data-testid="nav-services">SERVICES</a>
           <a href="#about" className="nav-link" data-testid="nav-about">ABOUT US</a>
         </div>
 
-        {/* Logo */}
-        <div className="flex flex-col items-center" data-testid="logo-section">
-          <div className="logo-heart relative">
-            <svg viewBox="0 0 100 90" className="w-16 h-14">
-              <defs>
-                <clipPath id="heartClip">
-                  <path d="M50,85 C20,55 5,35 5,25 C5,10 20,5 35,5 C45,5 50,15 50,15 C50,15 55,5 65,5 C80,5 95,10 95,25 C95,35 80,55 50,85 Z" />
-                </clipPath>
-              </defs>
-              <path d="M50,85 C20,55 5,35 5,25 C5,10 20,5 35,5 C45,5 50,15 50,15 C50,15 55,5 65,5 C80,5 95,10 95,25 C95,35 80,55 50,85 Z" 
-                    fill="none" stroke="#4a4a4a" strokeWidth="3"/>
-              <g clipPath="url(#heartClip)">
-                <rect x="0" y="0" width="100" height="45" fill="#87CEEB"/>
-                <polygon points="20,45 30,28 40,42 50,20 60,42 70,28 80,45" fill="white"/>
-                <polygon points="25,45 35,32 45,43 55,25 65,43 75,32 85,45" fill="#2d5a3d"/>
-                <polygon points="15,55 25,45 35,55 45,42 55,55 65,45 75,55 85,48 95,55" fill="#1a472a"/>
-                <rect x="0" y="55" width="100" height="35" fill="#1a472a"/>
-                <rect x="42" y="58" width="16" height="18" fill="#d4a574"/>
-                <polygon points="38,58 50,45 62,58" fill="#4a4a4a"/>
-              </g>
-            </svg>
-            {/* Maple Leaf */}
-            <svg viewBox="0 0 24 24" className="absolute -top-1 left-1/2 transform -translate-x-1/2 w-4 h-4">
-              <path d="M12,2 L13.5,7 L17,6 L15,9 L20,10 L16,13 L18,17 L12,14 L6,17 L8,13 L4,10 L9,9 L7,6 L10.5,7 Z" fill="#c41e3a"/>
-            </svg>
-          </div>
-          <div className="text-center flex items-center gap-1">
-            <h1 className="logo-title font-serif italic">Mi hogar</h1>
-            <svg viewBox="0 0 30 40" className="w-5 h-6 ml-1">
-              <ellipse cx="10" cy="32" rx="8" ry="6" fill="#2d5a3d"/>
-              <rect x="8" y="8" width="4" height="24" fill="#2d5a3d"/>
-              <circle cx="10" cy="10" r="6" fill="#2d5a3d"/>
-              <path d="M10,4 Q16,8 10,14 Q4,8 10,4" fill="#4a7c59"/>
-            </svg>
-          </div>
-          <p className="logo-subtitle">Home Cleaning</p>
+        {/* Center Logo */}
+        <div className="flex flex-col items-center flex-shrink-0 mx-4" data-testid="logo-section">
+          <img 
+            src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/y0mq50rq_logo_sin_fondo-1-removebg-preview.png"
+            alt="Mi Hogar Home Cleaning"
+            className="logo-image"
+          />
         </div>
 
         {/* Right Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-8 flex-1 justify-end">
           <a href="#local" className="nav-link" data-testid="nav-local">LOCAL FOCUS</a>
           <a href="#quote" className="btn-quote" data-testid="nav-quote">GET A QUOTE</a>
         </div>
