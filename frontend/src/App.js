@@ -8,38 +8,40 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white py-4 px-6 sticky top-0 z-50 shadow-sm" data-testid="navigation">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        {/* Left Navigation */}
-        <div className="hidden md:flex items-center space-x-8 flex-1">
-          <a href="#home" className="nav-link active" data-testid="nav-home">HOME</a>
-          <a href="#services" className="nav-link" data-testid="nav-services">SERVICES</a>
-          <a href="#about" className="nav-link" data-testid="nav-about">ABOUT US</a>
-        </div>
+    <nav className="bg-white py-2 px-6 sticky top-0 z-50 shadow-sm" data-testid="navigation">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-center justify-center">
+          {/* Left Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#home" className="nav-link active" data-testid="nav-home">HOME</a>
+            <a href="#services" className="nav-link" data-testid="nav-services">SERVICES</a>
+            <a href="#about" className="nav-link" data-testid="nav-about">ABOUT US</a>
+          </div>
 
-        {/* Center Logo */}
-        <div className="flex flex-col items-center flex-shrink-0 mx-4" data-testid="logo-section">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/y0mq50rq_logo_sin_fondo-1-removebg-preview.png"
-            alt="Mi Hogar Home Cleaning"
-            className="logo-image"
-          />
-        </div>
+          {/* Center Logo */}
+          <div className="flex items-center justify-center mx-8 md:mx-16" data-testid="logo-section">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/y0mq50rq_logo_sin_fondo-1-removebg-preview.png"
+              alt="Mi Hogar Home Cleaning"
+              className="logo-image"
+            />
+          </div>
 
-        {/* Right Navigation */}
-        <div className="hidden md:flex items-center space-x-8 flex-1 justify-end">
-          <a href="#local" className="nav-link" data-testid="nav-local">LOCAL FOCUS</a>
-          <a href="#quote" className="btn-quote" data-testid="nav-quote">GET A QUOTE</a>
-        </div>
+          {/* Right Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#local" className="nav-link" data-testid="nav-local">LOCAL FOCUS</a>
+            <a href="#quote" className="btn-quote" data-testid="nav-quote">GET A QUOTE</a>
+          </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-forest-dark"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-          data-testid="mobile-menu-btn"
-        >
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden absolute right-6 text-forest-dark"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            data-testid="mobile-menu-btn"
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
