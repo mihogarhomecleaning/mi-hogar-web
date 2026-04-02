@@ -223,6 +223,58 @@
 }
 
 /* ===== Contact Footer ===== */
+.contact-footer-new {
+  position: relative;
+  width: 100%;
+}
+
+.footer-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.footer-full-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-contact-overlay {
+  position: absolute;
+  top: 48%;
+  right: 18%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-phone {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a472a;
+  margin-left: 0;
+}
+
+.footer-email {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a472a;
+  margin-left: 0;
+}
+
+@media (max-width: 768px) {
+  .footer-contact-overlay {
+    right: 5%;
+  }
+  
+  .footer-phone,
+  .footer-email {
+    font-size: 0.8rem;
+    margin-left: 25px;
+  }
+}
+
 .contact-footer {
   position: relative;
   background-color: var(--cream);

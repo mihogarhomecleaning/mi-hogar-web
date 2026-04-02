@@ -187,74 +187,16 @@ const ServicesSection = () => {
 // Contact Footer Section
 const ContactFooter = () => {
   return (
-    <footer id="local" className="contact-footer" data-testid="contact-footer">
-      <div className="footer-wave">
-        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-          <path d="M0,50 Q360,0 720,50 T1440,50 L1440,100 L0,100 Z" fill="#f5f5f0"/>
-        </svg>
-      </div>
-      
-      <div className="footer-content">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            
-            {/* Map Section */}
-            <div className="map-section" data-testid="map-section">
-              <div className="map-container">
-                <img 
-                  src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/pmq2jhyp_WhatsApp%20Image%202026-04-01%20at%209.40.27%20PM.jpeg"
-                  alt="Canmore location map"
-                  className="map-image"
-                />
-                <div className="map-pin-custom">
-                  <img 
-                    src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/3wxlwb1v_localization-removebg-preview.png"
-                    alt="Location"
-                    className="location-icon"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Center Logo */}
-            <div className="footer-logo" data-testid="footer-logo">
-              <div className="maple-leaf">
-                <svg viewBox="0 0 50 60" className="w-12 h-14">
-                  <path d="M25,5 L28,15 L35,12 L32,20 L42,22 L35,28 L45,35 L35,35 L38,45 L25,40 L12,45 L15,35 L5,35 L15,28 L8,22 L18,20 L15,12 L22,15 Z" 
-                        fill="#c41e3a"/>
-                </svg>
-              </div>
-              <div className="footer-icon-group">
-                <div className="cleaning-bottle">
-                  <svg viewBox="0 0 40 80" className="w-8 h-16">
-                    <rect x="12" y="10" width="16" height="8" fill="#2d5a3d" rx="2"/>
-                    <rect x="8" y="18" width="24" height="50" fill="#2d5a3d" rx="4"/>
-                    <circle cx="20" cy="35" r="3" fill="white"/>
-                    <rect x="18" y="38" width="4" height="15" fill="white"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Contact Info */}
-            <div className="contact-info" data-testid="contact-info">
-              <div className="contact-item">
-                <Phone className="w-5 h-5 text-forest-primary" />
-                <span>403-679-1671</span>
-              </div>
-              <div className="contact-item">
-                <Mail className="w-5 h-5 text-forest-primary" />
-                <span>info@homecleaningcanmore.ca</span>
-              </div>
-              <div className="bilingual-text">
-                Proudly bilingual / Orgullosamente bilingüe.
-              </div>
-              <div className="flags">
-                <span className="flag-spain">🇪🇸</span>
-                <span className="flag-canada">🇨🇦</span>
-              </div>
-            </div>
-          </div>
+    <footer id="local" className="contact-footer-new" data-testid="contact-footer">
+      <div className="footer-image-container">
+        <img 
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/evof9b44_1.jpg"
+          alt="Canmore location with contact info"
+          className="footer-full-image"
+        />
+        <div className="footer-contact-overlay">
+          <div className="footer-phone">403-679-1671</div>
+          <div className="footer-email">info@homecleaningcanmore.ca</div>
         </div>
       </div>
     </footer>
