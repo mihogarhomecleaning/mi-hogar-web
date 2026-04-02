@@ -66,8 +66,8 @@ const HeroSection = () => {
     <section id="home" className="hero-section" data-testid="hero-section">
       <div className="hero-image-container">
         <img 
-          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l2hdic3l_modern-chalet-interior-overlooking-stunning-snow-capped-mountains-at-sunset-photo.jpg" 
-          alt="Modern chalet interior with mountain view at sunset"
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/a66gc4td_images%20%281%29.jpeg" 
+          alt="Cozy chalet living room with mountain view"
           className="hero-image"
         />
         <div className="hero-overlay"></div>
