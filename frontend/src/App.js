@@ -201,26 +201,17 @@ const ContactFooter = () => {
             {/* Map Section */}
             <div className="map-section" data-testid="map-section">
               <div className="map-container">
-                <div className="map-placeholder">
-                  <svg viewBox="0 0 300 150" className="w-full h-full">
-                    {/* Map background */}
-                    <rect width="300" height="150" fill="#e8f4e8"/>
-                    {/* Roads */}
-                    <path d="M0,75 Q75,60 150,80 T300,70" stroke="#f5f5f0" strokeWidth="8" fill="none"/>
-                    <path d="M50,0 Q60,75 40,150" stroke="#f5f5f0" strokeWidth="6" fill="none"/>
-                    <path d="M200,0 Q180,50 220,100 T180,150" stroke="#f5f5f0" strokeWidth="5" fill="none"/>
-                    {/* Town area */}
-                    <ellipse cx="100" cy="80" rx="40" ry="30" fill="#d4e8d4"/>
-                    {/* Water */}
-                    <path d="M220,100 Q260,90 300,110 L300,150 L200,150 Q210,120 220,100" fill="#a8d4e8"/>
-                    {/* Location marker */}
-                    <circle cx="100" cy="75" r="8" fill="#2d5a3d"/>
-                    <circle cx="100" cy="75" r="4" fill="white"/>
-                  </svg>
-                </div>
-                <div className="map-pin">
-                  <MapPin className="w-5 h-5 text-forest-primary" />
-                  <span className="map-label">Canmore</span>
+                <img 
+                  src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/pmq2jhyp_WhatsApp%20Image%202026-04-01%20at%209.40.27%20PM.jpeg"
+                  alt="Canmore location map"
+                  className="map-image"
+                />
+                <div className="map-pin-custom">
+                  <img 
+                    src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/3wxlwb1v_localization-removebg-preview.png"
+                    alt="Location"
+                    className="location-icon"
+                  />
                 </div>
               </div>
             </div>
