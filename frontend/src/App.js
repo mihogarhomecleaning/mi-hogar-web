@@ -111,7 +111,7 @@ const ServicesSection = () => {
 
   const bottomServices = [
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/s3xwyqki_cleaning_carpet1.png",
+      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/74r0l4mn_cleaning_carpet1-removebg-preview.png",
       title: "PROFESSIONAL CARPET",
       links: ["Steam Extraction", "Deep Clean"],
       testId: "service-pro-carpet"
