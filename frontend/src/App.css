@@ -163,15 +163,15 @@
 
 .service-card {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
   background: #ffffff;
 }
 
 .service-icon-wrapper {
   position: relative;
   display: inline-block;
-  margin-bottom: 1.5rem;
-  padding: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
   background: transparent;
   border-radius: 0;
 }
@@ -203,7 +203,7 @@
   font-size: 1rem;
   font-weight: 700;
   color: var(--gray-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   letter-spacing: 0.05em;
 }
 
