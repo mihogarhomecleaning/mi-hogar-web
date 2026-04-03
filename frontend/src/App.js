@@ -1,48 +1,7 @@
 import "@/App.css";
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
-import { Phone, Mail, MapPin, Menu, X, ChevronDown } from "lucide-react";
+import { Phone, Mail, MapPin, Menu, X, ChevronDown, MessageCircle } from "lucide-react";
 import { useState, useEffect } from "react";
-
-// Service Icons Components
-const ResidentialIcon = () => (
-  <img 
-    src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/15e4oh01_residential1.png"
-    alt="Residential Cleaning"
-    className="service-image"
-  />
-);
-
-const SofaIcon = () => (
-  <img 
-    src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/v0wpxzqm_SOFA1.png"
-    alt="Sofa & Upholstery"
-    className="service-image"
-  />
-);
-
-const SpecializedIcon = () => (
-  <img 
-    src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/rbs7d979_UTENSILIOS1.png"
-    alt="Specialized Cleaning"
-    className="service-image"
-  />
-);
-
-const CarpetIcon = () => (
-  <img 
-    src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/74r0l4mn_cleaning_carpet1-removebg-preview.png"
-    alt="Professional Carpet"
-    className="service-image"
-  />
-);
-
-const CarIcon = () => (
-  <img 
-    src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l7hpd6bb_car-shark1.png"
-    alt="Car Interior Detailing"
-    className="service-image-wide"
-  />
-);
 
 // Navigation Component
 const Navigation = () => {
@@ -57,6 +16,7 @@ const Navigation = () => {
     { name: "Deep Cleaning", path: "/services/deep-cleaning" },
     { name: "Airbnb & Vacation Rentals", path: "/services/airbnb-vacation" },
     { name: "Professional Carpet Cleaning", path: "/services/carpet-cleaning" },
+    { name: "Post-Construction Cleanup", path: "/services/post-construction" },
   ];
 
   useEffect(() => {
@@ -160,157 +120,226 @@ const Navigation = () => {
   );
 };
 
-// Hero Section
+// ==================== NEW HOME PAGE SECTIONS ====================
+
+// Hero Section with Real Team Photo
 const HeroSection = () => {
   return (
-    <section id="home" className="hero-section" data-testid="hero-section">
-      <div className="hero-image-container">
+    <section className="hero-new" data-testid="hero-section">
+      <div className="hero-bg-container">
         <img 
-          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/37i3bn3l_FONDO.jpg" 
-          alt="Modern home interior with Three Sisters mountain view"
-          className="hero-image"
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/e0jwdg5h_image_69.jpg" 
+          alt="Mi Hogar team member cleaning in Canmore home with mountain view"
+          className="hero-bg-image"
         />
-        <div className="hero-overlay"></div>
+        <div className="hero-overlay-gradient"></div>
       </div>
-      <div className="hero-content">
-        <h2 className="hero-title" data-testid="hero-title">
-          TRUSTWORTHY HOME CARE,
-          <br />
-          <span>BOW VALLEY LOCAL</span>
+      <div className="hero-content-new">
+        <h1 className="hero-main-title">
+          MI HOGAR HOME CLEANING
+        </h1>
+        <h2 className="hero-sub-title">
+          YOUR CANMORE DEEP CLEANING EXPERTS
         </h2>
-        <p className="hero-subtitle" data-testid="hero-subtitle">
-          WE CLEAN YOUR HOME LIKE OUR OWN
+        <p className="hero-tagline">
+          ✨ Local, Family-Owned, 5-Star Service ✨
         </p>
+        <Link to="/quote" className="btn-hero-cta">GET A QUOTE</Link>
       </div>
     </section>
   );
 };
 
-// Services Section
-const ServicesSection = () => {
-  const topServices = [
+// Services Grid Section
+const ServicesGridSection = () => {
+  const services = [
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/15e4oh01_residential1.png",
-      title: "RESIDENTIAL CLEANING",
-      links: [
-        { name: "Deep", path: "/services/deep-cleaning" },
-        { name: "Regular", path: "/services/regular-cleaning" },
-        { name: "Move-in", path: "/services/deep-cleaning" }
-      ],
-      testId: "service-residential"
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/xjg6e2mg_image_71.png",
+      title: "Residential Cleaning",
+      subtext: "Deep / Regular / Move-in >",
+      path: "/services/regular-cleaning"
     },
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/v0wpxzqm_SOFA1.png",
-      title: "CARPET & UPHOLSTERY",
-      links: [
-        { name: "Steam Clean", path: "/services/carpet-cleaning" },
-        { name: "Sofa", path: "/services/sofa-upholstery" }
-      ],
-      testId: "service-carpet"
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/v0wpxzqm_SOFA1.png",
+      title: "Sofa & Upholstery",
+      subtext: "✨ Professional Deep Clean ✨",
+      path: "/services/sofa-upholstery"
     },
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/rbs7d979_UTENSILIOS1.png",
-      title: "SPECIALIZED",
-      links: [
-        { name: "Airbnb", path: "/services/airbnb-vacation" },
-        { name: "Vacation Rentals", path: "/services/airbnb-vacation" }
-      ],
-      testId: "service-specialized"
-    }
-  ];
-
-  const bottomServices = [
-    {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/74r0l4mn_cleaning_carpet1-removebg-preview.png",
-      title: "PROFESSIONAL CARPET",
-      links: [
-        { name: "Steam Extraction", path: "/services/carpet-cleaning" },
-        { name: "Deep Clean", path: "/services/carpet-cleaning" }
-      ],
-      testId: "service-pro-carpet"
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/2v673ucj_image_70.png",
+      title: "Airbnb & Vacation Rentals",
+      subtext: "Turnover & Presentation",
+      path: "/services/airbnb-vacation"
     },
     {
-      image: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l7hpd6bb_car-shark1.png",
-      title: "CAR INTERIOR DETAILING",
-      links: [
-        { name: "Car Interior", path: "/services/car-interior" },
-        { name: "Floor Mats", path: "/services/car-interior" }
-      ],
-      testId: "service-mat",
-      wider: true
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/jgkivce7_image_63.png",
+      title: "Professional Carpet",
+      subtext: "Restorative Deep Extraction",
+      path: "/services/carpet-cleaning"
+    },
+    {
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/xdmpkta6_image.jpg",
+      title: "Post-Construction",
+      subtext: "Drywall Dust & Debris Removal",
+      path: "/services/post-construction"
+    },
+    {
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l7hpd6bb_car-shark1.png",
+      title: "Car Interior Detailing",
+      subtext: "Deep Sanitization",
+      path: "/services/car-interior"
     }
   ];
 
   return (
-    <section id="services" className="services-section" data-testid="services-section">
-      <div className="max-w-6xl mx-auto px-4">
-        {/* Top row - 3 services */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {topServices.map((service, index) => (
-            <div key={index} className="service-card" data-testid={service.testId}>
-              <div className="service-icon-wrapper">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className="service-image"
-                />
-              </div>
-              <h3 className="service-title">{service.title}</h3>
-              <div className="service-links">
-                {service.links.map((link, i) => (
-                  <span key={i}>
-                    <Link to={link.path} className="service-link">
-                      {link.name}
-                    </Link>
-                    {i < service.links.length - 1 && " / "}
-                  </span>
-                ))}
-                {index === 0 && " >"}
-              </div>
+    <section className="services-grid-section">
+      <h2 className="section-title">OUR SERVICES</h2>
+      <div className="services-grid">
+        {services.map((service, index) => (
+          <Link to={service.path} key={index} className="service-grid-card">
+            <div className="service-grid-icon">
+              <img src={service.icon} alt={service.title} />
             </div>
-          ))}
+            <h3 className="service-grid-title">{service.title}</h3>
+            <p className="service-grid-subtext">{service.subtext}</p>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+// 5-Star Difference Section (Airbnb)
+const FiveStarSection = () => {
+  return (
+    <section className="five-star-section">
+      <div className="lake-watermark"></div>
+      <div className="five-star-content">
+        <div className="five-star-text">
+          <h2 className="section-title-sparkle">✨ THE MI HOGAR 5-STAR DIFFERENCE ✨</h2>
+          <div className="five-star-icon">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/2v673ucj_image_70.png" 
+              alt="Airbnb Service Icon"
+              className="feature-icon"
+            />
+          </div>
+          <ul className="check-list">
+            <li>✅ Hotel-Quality Turnover</li>
+            <li>✅ Detailed Sanitization</li>
+            <li>✅ Restocking & Presentation</li>
+          </ul>
+          <Link to="/services/airbnb-vacation" className="btn-section-cta">Learn More</Link>
         </div>
-        
-        {/* Bottom row - 2 services centered */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {bottomServices.map((service, index) => (
-            <div key={index} className="service-card" data-testid={service.testId}>
-              <div className="service-icon-wrapper">
-                <img 
-                  src={service.image} 
-                  alt={service.title}
-                  className={service.wider ? "service-image-wide" : "service-image"}
-                />
-              </div>
-              <h3 className="service-title">{service.title}</h3>
-              <div className="service-links">
-                {service.links.map((link, i) => (
-                  <span key={i}>
-                    <Link to={link.path} className="service-link">
-                      {link.name}
-                    </Link>
-                    {i < service.links.length - 1 && " / "}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="five-star-image">
+          <div className="faded-image-container">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/tvbqqetp_image_66.jpg" 
+              alt="Airbnb Welcome Kit prepared by Mi Hogar"
+              className="faded-photo"
+            />
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-// Contact Footer Section
-const ContactFooter = () => {
+// Post-Construction Section
+const PostConstructionSection = () => {
   return (
-    <footer id="local" className="contact-footer-new" data-testid="contact-footer">
-      <div className="footer-image-container">
-        <img 
-          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/m4dgynsv_1.jpg"
-          alt="Canmore location with contact info"
-          className="footer-full-image"
-        />
+    <section className="post-construction-section">
+      <div className="forest-watermark"></div>
+      <div className="post-content">
+        <div className="post-images">
+          <div className="faded-image-container">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/byfdji60_image_67.jpg" 
+              alt="Team member cleaning sofa with Shark extractor"
+              className="faded-photo"
+            />
+          </div>
+          <div className="faded-image-container mt-4">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/fag1x24g_image_68.jpg" 
+              alt="Team member vacuuming carpet in office"
+              className="faded-photo"
+            />
+          </div>
+        </div>
+        <div className="post-text">
+          <h2 className="section-title-sparkle">✨ RESTORATIVE POST-CONSTRUCTION CLEANUP ✨</h2>
+          <div className="post-icon">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/jgkivce7_image_63.png" 
+              alt="Post-Construction Icon"
+              className="feature-icon"
+            />
+          </div>
+          <ul className="check-list">
+            <li>✅ Drywall Dust Removal</li>
+            <li>✅ Grout & Surface Restoration</li>
+            <li>✅ Move-In Ready Presentation</li>
+          </ul>
+          <Link to="/services/post-construction" className="btn-section-cta">Learn More</Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// New Footer Section
+const NewFooter = () => {
+  return (
+    <footer className="new-footer">
+      <div className="footer-columns">
+        {/* Logo Column */}
+        <div className="footer-col">
+          <img 
+            src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/y0mq50rq_logo_sin_fondo-1-removebg-preview.png"
+            alt="Mi Hogar Home Cleaning"
+            className="footer-logo"
+          />
+          <p className="footer-tagline">We clean your home like our own</p>
+        </div>
+
+        {/* Contact Column */}
+        <div className="footer-col">
+          <h3 className="footer-col-title">CONTACT US</h3>
+          <div className="footer-contact-items">
+            <a href="tel:4036791671" className="footer-contact-item">
+              <Phone size={18} />
+              <span>403-679-1671</span>
+            </a>
+            <a href="mailto:info@homecleaningcanmore.ca" className="footer-contact-item">
+              <Mail size={18} />
+              <span>info@homecleaningcanmore.ca</span>
+            </a>
+            <a 
+              href="https://wa.me/14036791671?text=Hello!%20I'm%20interested%20in%20your%20cleaning%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-whatsapp-btn"
+            >
+              <MessageCircle size={18} />
+              <span>Chat with Us on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Service Area Column */}
+        <div className="footer-col">
+          <h3 className="footer-col-title">SERVICE AREA</h3>
+          <div className="footer-contact-item">
+            <MapPin size={18} />
+            <span>Serving Canmore & The Bow Valley</span>
+          </div>
+          <p className="footer-areas">Canmore • Deadman's Flats • Harvie Heights • Lac des Arcs</p>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <p>© 2026 Mi Hogar Home Cleaning. All rights reserved.</p>
+        <p className="footer-bilingual">Proudly bilingual / Orgullosamente bilingüe 🇨🇦 🇪🇸</p>
       </div>
     </footer>
   );
@@ -340,12 +369,56 @@ const WhatsAppButton = () => {
 
 // ==================== SERVICE PAGES ====================
 
+// Post-Construction Page (NEW)
+const PostConstructionPage = () => (
+  <div className="page-container">
+    <div className="page-hero bg-gradient-to-b from-green-50 to-white">
+      <div className="max-w-4xl mx-auto text-center py-16 px-4">
+        <img 
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/jgkivce7_image_63.png"
+          alt="Post-Construction Cleaning"
+          className="page-hero-icon"
+        />
+        <h1 className="page-title">Post-Construction Cleanup</h1>
+        <p className="page-subtitle">Drywall Dust & Debris Removal Specialists</p>
+      </div>
+    </div>
+    <div className="page-content">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        <div className="content-card">
+          <h2 className="content-title">Professional Construction Cleanup</h2>
+          <p className="content-text">
+            After construction or renovation, your space needs specialized cleaning to remove fine drywall dust, debris, and construction residue. Our <strong>post-construction cleanup service</strong> restores your home to move-in ready condition.
+          </p>
+          <ul className="feature-list">
+            <li>Complete drywall dust removal from all surfaces</li>
+            <li>Grout and tile cleaning</li>
+            <li>Window and glass cleaning</li>
+            <li>Floor restoration and polishing</li>
+            <li>HVAC vent and filter cleaning</li>
+            <li>Final detail cleaning for move-in</li>
+          </ul>
+          <div className="cta-section">
+            <p className="cta-text">Ready to see your renovation shine?</p>
+            <Link to="/quote" className="btn-cta">Get a Quote</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+    <NewFooter />
+  </div>
+);
+
 // Sofa & Upholstery Page
 const SofaUpholsteryPage = () => (
   <div className="page-container">
     <div className="page-hero bg-gradient-to-b from-green-50 to-white">
       <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <SofaIcon />
+        <img 
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/v0wpxzqm_SOFA1.png"
+          alt="Sofa Cleaning"
+          className="page-hero-icon"
+        />
         <h1 className="page-title">Couch Cleaning Canmore</h1>
         <p className="page-subtitle">Breathe Life Back into Your Upholstery</p>
       </div>
@@ -372,7 +445,7 @@ const SofaUpholsteryPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
 
@@ -381,7 +454,11 @@ const CarInteriorPage = () => (
   <div className="page-container">
     <div className="page-hero bg-gradient-to-b from-green-50 to-white">
       <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <CarIcon />
+        <img 
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l7hpd6bb_car-shark1.png"
+          alt="Car Interior Detailing"
+          className="page-hero-icon-wide"
+        />
         <h1 className="page-title">Mobile Car Detailing Canmore</h1>
         <p className="page-subtitle">Professional Interior Restoration</p>
       </div>
@@ -408,7 +485,7 @@ const CarInteriorPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
 
@@ -417,7 +494,11 @@ const RegularCleaningPage = () => (
   <div className="page-container">
     <div className="page-hero bg-gradient-to-b from-green-50 to-white">
       <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <ResidentialIcon />
+        <img 
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/15e4oh01_residential1.png"
+          alt="Residential Cleaning"
+          className="page-hero-icon"
+        />
         <h1 className="page-title">Canmore House Cleaning</h1>
         <p className="page-subtitle">Reliable, Recurring Home Care</p>
       </div>
@@ -427,7 +508,7 @@ const RegularCleaningPage = () => (
         <div className="content-card">
           <h2 className="content-title">Maintenance Cleaning You Can Count On</h2>
           <p className="content-text">
-            Our <strong>regular cleaning service</strong> is designed for busy families and professionals who want a consistently clean home without the hassle. We handle the routine so you can focus on what matters.
+            Our <strong>regular cleaning service</strong> is designed for busy families and professionals who want a consistently clean home without the hassle.
           </p>
           <ul className="feature-list">
             <li>Weekly, bi-weekly, or monthly scheduling</li>
@@ -444,7 +525,7 @@ const RegularCleaningPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
 
@@ -453,7 +534,11 @@ const DeepCleaningPage = () => (
   <div className="page-container">
     <div className="page-hero bg-gradient-to-b from-green-50 to-white">
       <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <SpecializedIcon />
+        <img 
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/rbs7d979_UTENSILIOS1.png"
+          alt="Deep Cleaning"
+          className="page-hero-icon"
+        />
         <h1 className="page-title">Restorative Grout & Surface Cleaning</h1>
         <p className="page-subtitle">Deep Cleaning That Reaches Every Corner</p>
       </div>
@@ -463,7 +548,7 @@ const DeepCleaningPage = () => (
         <div className="content-card">
           <h2 className="content-title">Beyond Surface Clean</h2>
           <p className="content-text">
-            Our <strong>deep cleaning service</strong> reaches the places regular cleaning can't. We restore cleanliness to your grout lines, behind appliances, inside cabinets, and every forgotten corner.
+            Our <strong>deep cleaning service</strong> reaches the places regular cleaning can't.
           </p>
           <ul className="feature-list">
             <li>Grout line restoration and brightening</li>
@@ -480,7 +565,7 @@ const DeepCleaningPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
 
@@ -489,7 +574,11 @@ const AirbnbPage = () => (
   <div className="page-container">
     <div className="page-hero bg-gradient-to-b from-green-50 to-white">
       <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <ResidentialIcon />
+        <img 
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/2v673ucj_image_70.png"
+          alt="Airbnb Service"
+          className="page-hero-icon"
+        />
         <h1 className="page-title">Five-Star Turnover Services</h1>
         <p className="page-subtitle">For Your Vacation Rental</p>
       </div>
@@ -499,7 +588,7 @@ const AirbnbPage = () => (
         <div className="content-card">
           <h2 className="content-title">Reliable, High-Standard Cleaning for Hosts</h2>
           <p className="content-text">
-            As an <strong>Airbnb or vacation rental host</strong>, your reviews depend on cleanliness. We deliver hotel-quality presentation that keeps guests happy and 5-star reviews coming.
+            As an <strong>Airbnb or vacation rental host</strong>, your reviews depend on cleanliness. We deliver hotel-quality presentation.
           </p>
           <ul className="feature-list">
             <li>Complete sanitization between guests</li>
@@ -516,7 +605,7 @@ const AirbnbPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
 
@@ -525,7 +614,11 @@ const CarpetCleaningPage = () => (
   <div className="page-container">
     <div className="page-hero bg-gradient-to-b from-green-50 to-white">
       <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <CarpetIcon />
+        <img 
+          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/74r0l4mn_cleaning_carpet1-removebg-preview.png"
+          alt="Professional Carpet Cleaning"
+          className="page-hero-icon"
+        />
         <h1 className="page-title">Deep Carpet Restoration & Care</h1>
         <p className="page-subtitle">Professional Extraction Technology</p>
       </div>
@@ -535,7 +628,7 @@ const CarpetCleaningPage = () => (
         <div className="content-card">
           <h2 className="content-title">Restore Your Carpets to Like-New</h2>
           <p className="content-text">
-            Our <strong>professional carpet cleaning</strong> uses powerful extraction technology to remove stubborn dirt, winter salt and calcium buildup, allergens, and deep stains.
+            Our <strong>professional carpet cleaning</strong> uses powerful extraction technology.
           </p>
           <ul className="feature-list">
             <li>Professional extraction removes stubborn dirt</li>
@@ -552,11 +645,9 @@ const CarpetCleaningPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
-
-// ==================== OTHER PAGES ====================
 
 // About Us Page
 const AboutPage = () => (
@@ -572,10 +663,7 @@ const AboutPage = () => (
         <div className="content-card">
           <h2 className="content-title">A Family Business, Built on Trust</h2>
           <p className="content-text">
-            Mi Hogar means "My Home" in Spanish – and that's exactly how we treat every home we clean. We're a <strong>local, family-owned business</strong> based right here in the Bow Valley, serving Canmore and the surrounding communities.
-          </p>
-          <p className="content-text">
-            We understand the unique challenges of mountain living: the winter salt tracked in on boots, the mud from hiking trails, the dust from dry Alberta summers. We're your neighbors, and we take pride in helping our community maintain beautiful, healthy homes.
+            Mi Hogar means "My Home" in Spanish – and that's exactly how we treat every home we clean. We're a <strong>local, family-owned business</strong> based right here in the Bow Valley.
           </p>
           <h3 className="content-subtitle">Our Promise</h3>
           <ul className="feature-list">
@@ -592,7 +680,7 @@ const AboutPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
 
@@ -610,7 +698,7 @@ const LocalFocusPage = () => (
         <div className="content-card">
           <h2 className="content-title">Local Expertise, Mountain Standards</h2>
           <p className="content-text">
-            Living in Canmore means dealing with unique cleaning challenges. From <strong>winter salt stains</strong> tracked in on boots to <strong>muddy paw prints</strong> after hiking Grassi Lakes, we understand what your home goes through.
+            Living in Canmore means dealing with unique cleaning challenges.
           </p>
           <h3 className="content-subtitle">Canmore-Specific Challenges We Handle</h3>
           <ul className="feature-list">
@@ -621,10 +709,6 @@ const LocalFocusPage = () => (
             <li>Wood floor care in dry mountain air</li>
             <li>Large windows with mountain views kept sparkling</li>
           </ul>
-          <h3 className="content-subtitle">Serving the Bow Valley</h3>
-          <p className="content-text">
-            We proudly serve Canmore, Deadman's Flats, Harvie Heights, Lac des Arcs, and surrounding areas. As locals ourselves, we understand the rhythm of mountain town life and schedule around your needs.
-          </p>
           <div className="cta-section">
             <p className="cta-text">Let your neighbors take care of your home.</p>
             <Link to="/quote" className="btn-cta">Get a Quote</Link>
@@ -632,11 +716,11 @@ const LocalFocusPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
 
-// Portfolio / Our Work Page
+// Portfolio Page
 const PortfolioPage = () => (
   <div className="page-container">
     <div className="page-hero bg-gradient-to-b from-green-50 to-white">
@@ -650,9 +734,8 @@ const PortfolioPage = () => (
         <div className="content-card">
           <h2 className="content-title">Airbnb & Vacation Rental Results</h2>
           <p className="content-text">
-            We take pride in delivering <strong>hotel-quality cleanliness</strong> for vacation rentals throughout the Bow Valley. Our attention to detail helps hosts maintain 5-star reviews and happy guests.
+            We take pride in delivering <strong>hotel-quality cleanliness</strong> for vacation rentals throughout the Bow Valley.
           </p>
-          <h3 className="content-subtitle">What We Deliver</h3>
           <ul className="feature-list">
             <li>Spotless kitchens and bathrooms</li>
             <li>Fresh, crisp bed linens and towel presentation</li>
@@ -666,7 +749,7 @@ const PortfolioPage = () => (
         </div>
       </div>
     </div>
-    <ContactFooter />
+    <NewFooter />
   </div>
 );
 
@@ -747,6 +830,7 @@ const QuotePage = () => {
                   <option value="carpet">Professional Carpet Cleaning</option>
                   <option value="car">Car Interior Detailing</option>
                   <option value="airbnb">Airbnb & Vacation Rental</option>
+                  <option value="post-construction">Post-Construction Cleanup</option>
                   <option value="other">Other</option>
                 </select>
               </div>
@@ -780,7 +864,7 @@ const QuotePage = () => {
           </div>
         </div>
       </div>
-      <ContactFooter />
+      <NewFooter />
     </div>
   );
 };
@@ -788,10 +872,12 @@ const QuotePage = () => {
 // Main Home Page
 const HomePage = () => {
   return (
-    <div className="landing-page" data-testid="landing-page">
+    <div className="home-page" data-testid="landing-page">
       <HeroSection />
-      <ServicesSection />
-      <ContactFooter />
+      <ServicesGridSection />
+      <FiveStarSection />
+      <PostConstructionSection />
+      <NewFooter />
     </div>
   );
 };
@@ -821,6 +907,7 @@ function App() {
             <Route path="/services/deep-cleaning" element={<DeepCleaningPage />} />
             <Route path="/services/airbnb-vacation" element={<AirbnbPage />} />
             <Route path="/services/carpet-cleaning" element={<CarpetCleaningPage />} />
+            <Route path="/services/post-construction" element={<PostConstructionPage />} />
             {/* Other Pages */}
             <Route path="/about" element={<AboutPage />} />
             <Route path="/local-focus" element={<LocalFocusPage />} />
