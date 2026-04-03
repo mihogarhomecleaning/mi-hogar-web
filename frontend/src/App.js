@@ -142,7 +142,7 @@ const HeroSection = () => {
           YOUR CANMORE DEEP CLEANING EXPERTS
         </h2>
         <p className="hero-tagline">
-          ✨ Local, Family-Owned, 5-Star Service ✨
+          Local, Family-Owned Service
         </p>
         <Link to="/quote" className="btn-hero-cta">GET A QUOTE</Link>
       </div>
@@ -154,7 +154,7 @@ const HeroSection = () => {
 const ServicesGridSection = () => {
   const services = [
     {
-      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/xjg6e2mg_image_71.png",
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/5f808ab9_residential1.png",
       title: "Residential Cleaning",
       subtext: "Deep / Regular / Move-in >",
       path: "/services/regular-cleaning"
@@ -162,23 +162,23 @@ const ServicesGridSection = () => {
     {
       icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/v0wpxzqm_SOFA1.png",
       title: "Sofa & Upholstery",
-      subtext: "✨ Professional Deep Clean ✨",
+      subtext: "Professional Deep Clean",
       path: "/services/sofa-upholstery"
     },
     {
-      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/2v673ucj_image_70.png",
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/cmbb4q6x_image_70.png",
       title: "Airbnb & Vacation Rentals",
       subtext: "Turnover & Presentation",
       path: "/services/airbnb-vacation"
     },
     {
-      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/jgkivce7_image_63.png",
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/5lmp687n_image_63.png",
       title: "Professional Carpet",
       subtext: "Restorative Deep Extraction",
       path: "/services/carpet-cleaning"
     },
     {
-      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/xdmpkta6_image.jpg",
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/5lmp687n_image_63.png",
       title: "Post-Construction",
       subtext: "Drywall Dust & Debris Removal",
       path: "/services/post-construction"
@@ -187,7 +187,8 @@ const ServicesGridSection = () => {
       icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l7hpd6bb_car-shark1.png",
       title: "Car Interior Detailing",
       subtext: "Deep Sanitization",
-      path: "/services/car-interior"
+      path: "/services/car-interior",
+      larger: true
     }
   ];
 
@@ -197,7 +198,7 @@ const ServicesGridSection = () => {
       <div className="services-grid">
         {services.map((service, index) => (
           <Link to={service.path} key={index} className="service-grid-card">
-            <div className="service-grid-icon">
+            <div className={`service-grid-icon ${service.larger ? 'service-grid-icon-large' : ''}`}>
               <img src={service.icon} alt={service.title} />
             </div>
             <h3 className="service-grid-title">{service.title}</h3>
@@ -209,25 +210,26 @@ const ServicesGridSection = () => {
   );
 };
 
-// 5-Star Difference Section (Airbnb)
-const FiveStarSection = () => {
+// Pride in Details Section (Airbnb)
+const PrideInDetailsSection = () => {
   return (
     <section className="five-star-section">
       <div className="lake-watermark"></div>
       <div className="five-star-content">
         <div className="five-star-text">
-          <h2 className="section-title-sparkle">✨ THE MI HOGAR 5-STAR DIFFERENCE ✨</h2>
+          <h2 className="section-title-clean">WE TAKE PRIDE IN EVERY DETAIL</h2>
+          <h3 className="section-subtitle-clean">SANITIZATION & PRESENTATION</h3>
           <div className="five-star-icon">
             <img 
-              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/2v673ucj_image_70.png" 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/cmbb4q6x_image_70.png" 
               alt="Airbnb Service Icon"
               className="feature-icon"
             />
           </div>
           <ul className="check-list">
-            <li>✅ Hotel-Quality Turnover</li>
-            <li>✅ Detailed Sanitization</li>
-            <li>✅ Restocking & Presentation</li>
+            <li>✅ Deep Sanitization & Hygiene</li>
+            <li>✅ Professional Linens & Restocking</li>
+            <li>✅ 5-Star Guest Presentation</li>
           </ul>
           <Link to="/services/airbnb-vacation" className="btn-section-cta">Learn More</Link>
         </div>
@@ -452,15 +454,15 @@ const SofaUpholsteryPage = () => (
 // Car Interior Page
 const CarInteriorPage = () => (
   <div className="page-container">
-    <div className="page-hero bg-gradient-to-b from-green-50 to-white">
-      <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <img 
-          src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/l7hpd6bb_car-shark1.png"
-          alt="Car Interior Detailing"
-          className="page-hero-icon-wide"
-        />
-        <h1 className="page-title">Mobile Car Detailing Canmore</h1>
-        <p className="page-subtitle">Professional Interior Restoration</p>
+    <div className="page-hero-image">
+      <img 
+        src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/59ru3znc_image_72.jpg"
+        alt="Car interior cleaning with mountain view"
+        className="page-banner-image"
+      />
+      <div className="page-hero-overlay">
+        <h1 className="page-title-overlay">Mobile Car Detailing Canmore</h1>
+        <p className="page-subtitle-overlay">Professional Interior Restoration</p>
       </div>
     </div>
     <div className="page-content">
@@ -875,7 +877,7 @@ const HomePage = () => {
     <div className="home-page" data-testid="landing-page">
       <HeroSection />
       <ServicesGridSection />
-      <FiveStarSection />
+      <PrideInDetailsSection />
       <PostConstructionSection />
       <NewFooter />
     </div>
