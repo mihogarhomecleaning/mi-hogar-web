@@ -266,8 +266,8 @@
 }
 
 .service-grid-icon-large {
-  width: 180px;
-  height: 150px;
+  width: 220px;
+  height: 180px;
 }
 
 .service-grid-icon img {
@@ -277,8 +277,8 @@
 }
 
 .service-grid-icon-large img {
-  max-width: 170px;
-  max-height: 140px;
+  max-width: 210px;
+  max-height: 170px;
 }
 
 .service-grid-title {
@@ -484,6 +484,12 @@
 .portfolio-feature-icon {
   width: 120px;
   height: 120px;
+  object-fit: contain;
+}
+
+.portfolio-feature-icon-large {
+  width: 160px;
+  height: 160px;
   object-fit: contain;
 }
 

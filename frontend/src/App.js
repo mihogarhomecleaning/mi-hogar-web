@@ -295,7 +295,7 @@ const SofaPortfolioSection = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/w6j58m8h_image_71.png" 
               alt="Sofa Cleaning Icon"
-              className="portfolio-feature-icon"
+              className="portfolio-feature-icon-large"
             />
           </div>
           <h2 className="portfolio-title">SOFA & UPHOLSTERY DEEP CLEANING</h2>
