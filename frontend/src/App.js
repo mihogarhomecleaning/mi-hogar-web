@@ -716,8 +716,8 @@ const AboutPage = () => (
   <div className="page-container">
     <div className="page-hero-about">
       <img 
-        src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/1asvohrc_IMG_5630.jpeg"
-        alt="Cleaning Services You Can Trust in Canmore & Bow Valley"
+        src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/af5dcw7d_ChatGPT%20Image%20Apr%204%2C%202026%2C%2003_51_09%20PM.png"
+        alt="Cozy Canmore home interior with mountain view"
         className="about-hero-image"
       />
     </div>
