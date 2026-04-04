@@ -787,7 +787,7 @@ const PortfolioPage = () => (
   <div className="page-container">
     <div className="page-hero-about">
       <img 
-        src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/dldn5zhl_ChatGPT%20Image%20Apr%204%2C%202026%2C%2004_02_44%20PM.png"
+        src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/7nm1hmlb_IMG_5633.jpeg"
         alt="Professional cleaning services showcase - Kitchen, Bathroom, Bedroom"
         className="about-hero-image"
       />
