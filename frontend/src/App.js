@@ -211,36 +211,98 @@ const ServicesGridSection = () => {
 };
 
 // Pride in Details Section (Airbnb)
-const PrideInDetailsSection = () => {
+const AirbnbPortfolioSection = () => {
   return (
-    <section className="five-star-section">
-      <div className="lake-watermark"></div>
-      <div className="five-star-content">
-        <div className="five-star-text">
-          <h2 className="section-title-clean">WE TAKE PRIDE IN EVERY DETAIL</h2>
-          <h3 className="section-subtitle-clean">SANITIZATION & PRESENTATION</h3>
-          <div className="five-star-icon">
+    <section className="portfolio-section portfolio-light">
+      <div className="portfolio-content">
+        <div className="portfolio-image-side">
+          <div className="faded-image-container-small">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/rva91d6s_image_67%20-%20copia.jpg" 
+              alt="Airbnb Welcome Kit preparation"
+              className="faded-photo-small"
+            />
+          </div>
+        </div>
+        <div className="portfolio-text-side">
+          <div className="portfolio-icon">
             <img 
               src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/cmbb4q6x_image_70.png" 
               alt="Airbnb Service Icon"
-              className="feature-icon"
+              className="portfolio-feature-icon"
             />
           </div>
-          <ul className="check-list">
-            <li>✅ Deep Sanitization & Hygiene</li>
-            <li>✅ Professional Linens & Restocking</li>
-            <li>✅ 5-Star Guest Presentation</li>
-          </ul>
+          <h2 className="portfolio-title">AIRBNB & VACATION RENTALS</h2>
+          <p className="portfolio-description">
+            Hospitality excellence. We ensure your property is guest-ready with thorough sanitization, professional linen presentation, and that distinctive welcoming touch that guarantees 5-star reviews.
+          </p>
           <Link to="/services/airbnb-vacation" className="btn-section-cta">Learn More</Link>
         </div>
-        <div className="five-star-image">
-          <div className="faded-image-container">
+      </div>
+    </section>
+  );
+};
+
+// Office & Commercial Spaces Section
+const OfficePortfolioSection = () => {
+  return (
+    <section className="portfolio-section portfolio-cream">
+      <div className="portfolio-content portfolio-reverse">
+        <div className="portfolio-image-side">
+          <div className="faded-image-container-small">
             <img 
-              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/tvbqqetp_image_66.jpg" 
-              alt="Airbnb Welcome Kit prepared by Mi Hogar"
-              className="faded-photo"
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/qsk8ejpt_WhatsApp%20Image%202026-04-03%20at%202.33.28%20PM.jpeg" 
+              alt="Office cleaning service"
+              className="faded-photo-small"
             />
           </div>
+        </div>
+        <div className="portfolio-text-side">
+          <div className="portfolio-icon">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/5f808ab9_residential1.png" 
+              alt="Office Cleaning Icon"
+              className="portfolio-feature-icon"
+            />
+          </div>
+          <h2 className="portfolio-title">OFFICES & COMMERCIAL SPACES</h2>
+          <p className="portfolio-description">
+            Pristine, productive environments. Our commercial cleaning service focuses on high-touch surfaces and detailed office care, providing a healthy, professional atmosphere for your team and clients.
+          </p>
+          <Link to="/services/deep-cleaning" className="btn-section-cta">Learn More</Link>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Sofa & Upholstery Section
+const SofaPortfolioSection = () => {
+  return (
+    <section className="portfolio-section portfolio-light">
+      <div className="portfolio-content">
+        <div className="portfolio-image-side">
+          <div className="faded-image-container-small">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/e1j7n4nv_image_68.jpg" 
+              alt="Professional sofa extraction cleaning"
+              className="faded-photo-small"
+            />
+          </div>
+        </div>
+        <div className="portfolio-text-side">
+          <div className="portfolio-icon">
+            <img 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/w6j58m8h_image_71.png" 
+              alt="Sofa Cleaning Icon"
+              className="portfolio-feature-icon"
+            />
+          </div>
+          <h2 className="portfolio-title">SOFA & UPHOLSTERY DEEP CLEANING</h2>
+          <p className="portfolio-description">
+            Revitalize your furniture. Using professional extraction technology, we remove allergens and embedded stains from your upholstery, extending the life of your furniture and refreshing your home.
+          </p>
+          <Link to="/services/sofa-upholstery" className="btn-section-cta">Learn More</Link>
         </div>
       </div>
     </section>
@@ -877,8 +939,9 @@ const HomePage = () => {
     <div className="home-page" data-testid="landing-page">
       <HeroSection />
       <ServicesGridSection />
-      <PrideInDetailsSection />
-      <PostConstructionSection />
+      <AirbnbPortfolioSection />
+      <OfficePortfolioSection />
+      <SofaPortfolioSection />
       <NewFooter />
     </div>
   );
