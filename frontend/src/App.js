@@ -785,11 +785,12 @@ const LocalFocusPage = () => (
 // Portfolio Page
 const PortfolioPage = () => (
   <div className="page-container">
-    <div className="page-hero bg-gradient-to-b from-green-50 to-white">
-      <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <h1 className="page-title">Our Work</h1>
-        <p className="page-subtitle">See the Mi Hogar Difference</p>
-      </div>
+    <div className="page-hero-about">
+      <img 
+        src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/dldn5zhl_ChatGPT%20Image%20Apr%204%2C%202026%2C%2004_02_44%20PM.png"
+        alt="Professional cleaning services showcase - Kitchen, Bathroom, Bedroom"
+        className="about-hero-image"
+      />
     </div>
     <div className="page-content">
       <div className="max-w-4xl mx-auto px-4 py-12">
