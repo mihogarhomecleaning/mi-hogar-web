@@ -172,7 +172,7 @@ const ServicesGridSection = () => {
       path: "/services/airbnb-vacation"
     },
     {
-      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/5lmp687n_image_63.png",
+      icon: "https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/oinwc6fr_cleaning_carpet1.png",
       title: "Professional Carpet",
       subtext: "Restorative Deep Extraction",
       path: "/services/carpet-cleaning"
@@ -234,7 +234,7 @@ const AirbnbPortfolioSection = () => {
           </div>
           <h2 className="portfolio-title">AIRBNB & VACATION RENTALS</h2>
           <p className="portfolio-description">
-            Hospitality excellence. We ensure your property is guest-ready with thorough sanitization, professional linen presentation, and that distinctive welcoming touch that guarantees 5-star reviews.
+            Hospitality excellence. We ensure your property is guest-ready with deep sanitization and professional linen presentation.
           </p>
           <Link to="/services/airbnb-vacation" className="btn-section-cta">Learn More</Link>
         </div>
@@ -267,7 +267,7 @@ const OfficePortfolioSection = () => {
           </div>
           <h2 className="portfolio-title">OFFICES & COMMERCIAL SPACES</h2>
           <p className="portfolio-description">
-            Pristine, productive environments. Our commercial cleaning service focuses on high-touch surfaces and detailed office care, providing a healthy, professional atmosphere for your team and clients.
+            Impeccable workspace solutions for a healthy and professional environment.
           </p>
           <Link to="/services/deep-cleaning" className="btn-section-cta">Learn More</Link>
         </div>
@@ -300,7 +300,7 @@ const SofaPortfolioSection = () => {
           </div>
           <h2 className="portfolio-title">SOFA & UPHOLSTERY DEEP CLEANING</h2>
           <p className="portfolio-description">
-            Revitalize your furniture. Using professional extraction technology, we remove allergens and embedded stains from your upholstery, extending the life of your furniture and refreshing your home.
+            Revitalize your furniture with professional-grade extraction technology.
           </p>
           <Link to="/services/sofa-upholstery" className="btn-section-cta">Learn More</Link>
         </div>
@@ -364,7 +364,6 @@ const NewFooter = () => {
             alt="Mi Hogar Home Cleaning"
             className="footer-logo"
           />
-          <p className="footer-tagline">We clean your home like our own</p>
         </div>
 
         {/* Contact Column */}
@@ -699,7 +698,6 @@ const CarpetCleaningPage = () => (
             <li>Salt & calcium removal for Alberta winter grime</li>
             <li>Allergen reduction – dust, dander, pollen</li>
             <li>Stain treatment and removal</li>
-            <li>Fast drying times</li>
             <li>Eco-friendly cleaning solutions</li>
           </ul>
           <div className="cta-section">
@@ -716,11 +714,12 @@ const CarpetCleaningPage = () => (
 // About Us Page
 const AboutPage = () => (
   <div className="page-container">
-    <div className="page-hero bg-gradient-to-b from-green-50 to-white">
-      <div className="max-w-4xl mx-auto text-center py-16 px-4">
-        <h1 className="page-title">Meet the Team at Mi Hogar</h1>
-        <p className="page-subtitle">Your Neighbors in the Bow Valley</p>
-      </div>
+    <div className="page-hero-about">
+      <img 
+        src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/1asvohrc_IMG_5630.jpeg"
+        alt="Cleaning Services You Can Trust in Canmore & Bow Valley"
+        className="about-hero-image"
+      />
     </div>
     <div className="page-content">
       <div className="max-w-4xl mx-auto px-4 py-12">
@@ -735,7 +734,6 @@ const AboutPage = () => (
             <li>Consistent quality on every visit</li>
             <li>Eco-friendly, non-toxic cleaning products</li>
             <li>Respect for your home and belongings</li>
-            <li>Proudly bilingual – English & Spanish</li>
           </ul>
           <div className="cta-section">
             <p className="cta-text">Ready to experience the Mi Hogar difference?</p>
