@@ -218,7 +218,7 @@ const AirbnbPortfolioSection = () => {
         <div className="portfolio-image-side">
           <div className="faded-image-container-small">
             <img 
-              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/rva91d6s_image_67%20-%20copia.jpg" 
+              src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/0to9bdn5_IMG_5638.jpg" 
               alt="Airbnb Welcome Kit preparation"
               className="faded-photo-small"
             />
@@ -578,7 +578,6 @@ const RegularCleaningPage = () => (
             <li>Consistent, thorough surface cleaning</li>
             <li>Kitchen and bathroom sanitization</li>
             <li>Dusting, vacuuming, and mopping</li>
-            <li>Same trusted cleaner each visit</li>
             <li>Flexible scheduling to fit your life</li>
           </ul>
           <div className="cta-section">
