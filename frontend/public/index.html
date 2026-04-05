@@ -24,37 +24,6 @@
         <title>Mi Hogar Home Cleaning | Bow Valley</title>
         <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
         <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-        <!-- Tidio Chat Widget -->
-        <script src="//code.tidio.co/ov5mawa2gygui8joppvepetvxzc5pevz.js" async></script>
-        
-        <!-- Tidio Repositioning Script -->
-        <style>
-            /* Force Tidio to bottom-left */
-            #tidio-chat-iframe,
-            #tidio-chat,
-            div[style*="z-index: 999999999"],
-            iframe[title*="chat widget"] {
-                bottom: 20px !important;
-                left: 20px !important;
-                right: auto !important;
-            }
-        </style>
-        
-        <script>
-            // Reposition Tidio after it loads
-            window.addEventListener('load', function() {
-                setTimeout(function() {
-                    const tidioElements = document.querySelectorAll('[id*="tidio"], iframe[title*="chat"]');
-                    tidioElements.forEach(function(el) {
-                        if (el.style) {
-                            el.style.bottom = '20px';
-                            el.style.left = '20px';
-                            el.style.right = 'auto';
-                        }
-                    });
-                }, 2000);
-            });
-        </script>
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -183,6 +152,38 @@
                     recordCrossOriginIframes: true,
                     capturePerformance: false,
                 },
+            });
+        </script>
+        
+        <!-- Tidio Chat Widget - Loaded at end of body -->
+        <script src="//code.tidio.co/ov5mawa2gygui8joppvepetvxzc5pevz.js" async></script>
+        
+        <!-- Tidio Repositioning Script -->
+        <style>
+            /* Force Tidio to bottom-left */
+            #tidio-chat-iframe,
+            #tidio-chat,
+            div[style*="z-index: 999999999"],
+            iframe[title*="chat widget"] {
+                bottom: 20px !important;
+                left: 20px !important;
+                right: auto !important;
+            }
+        </style>
+        
+        <script>
+            // Reposition Tidio after it loads
+            window.addEventListener('load', function() {
+                setTimeout(function() {
+                    const tidioElements = document.querySelectorAll('[id*="tidio"], iframe[title*="chat"]');
+                    tidioElements.forEach(function(el) {
+                        if (el.style) {
+                            el.style.bottom = '20px';
+                            el.style.left = '20px';
+                            el.style.right = 'auto';
+                        }
+                    });
+                }, 2000);
             });
         </script>
     </body>
