@@ -400,17 +400,38 @@ const TrustBanner = () => {
           We accept Interac E-transfer, Credit Cards (Visa/Mastercard), and Cash for all your cleaning projects in the Bow Valley.
         </p>
         <div className="payment-icons">
-          <div className="payment-icon">
-            <span className="payment-label">Interac</span>
+          {/* Interac Logo */}
+          <div className="payment-icon-card">
+            <svg className="payment-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="40" rx="6" fill="#FFC220"/>
+              <text x="60" y="25" textAnchor="middle" fill="#000" fontSize="16" fontWeight="bold" fontFamily="Arial">interac</text>
+            </svg>
           </div>
-          <div className="payment-icon">
-            <span className="payment-label">Visa</span>
+          
+          {/* Visa Logo */}
+          <div className="payment-icon-card">
+            <svg className="payment-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="40" rx="6" fill="#1A1F71"/>
+              <text x="60" y="28" textAnchor="middle" fill="#fff" fontSize="24" fontWeight="bold" fontFamily="Arial" fontStyle="italic">VISA</text>
+            </svg>
           </div>
-          <div className="payment-icon">
-            <span className="payment-label">Mastercard</span>
+          
+          {/* Mastercard Logo */}
+          <div className="payment-icon-card">
+            <svg className="payment-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="40" rx="6" fill="#000"/>
+              <circle cx="45" cy="20" r="12" fill="#EB001B" opacity="0.9"/>
+              <circle cx="60" cy="20" r="12" fill="#FF5F00" opacity="0.9"/>
+              <circle cx="75" cy="20" r="12" fill="#F79E1B" opacity="0.9"/>
+            </svg>
           </div>
-          <div className="payment-icon">
-            <span className="payment-label">Cash</span>
+          
+          {/* Cash Icon */}
+          <div className="payment-icon-card">
+            <svg className="payment-logo" viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
+              <rect width="120" height="40" rx="6" fill="#2d5a3d"/>
+              <text x="60" y="25" textAnchor="middle" fill="#fff" fontSize="16" fontWeight="bold" fontFamily="Arial">CASH</text>
+            </svg>
           </div>
         </div>
       </div>
