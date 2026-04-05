@@ -1019,3 +1019,138 @@
     max-width: 300px;
   }
 }
+
+
+/* ===== NEXT-DAY PRIORITY SERVICE SECTION ===== */
+.priority-service-section {
+  background: linear-gradient(135deg, var(--soft-blue) 0%, var(--cream) 100%);
+  padding: 4rem 2rem;
+  margin: 3rem 0;
+}
+
+.priority-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--white);
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.priority-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.02em;
+}
+
+.priority-main-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--gray-dark);
+  margin-bottom: 2rem;
+}
+
+.priority-details {
+  text-align: left;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: var(--cream);
+  border-radius: 12px;
+  border-left: 4px solid var(--forest-primary);
+}
+
+.priority-subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
+}
+
+.priority-list {
+  list-style: none;
+  padding: 0;
+}
+
+.priority-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--gray-dark);
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.priority-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--forest-primary);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.priority-note {
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  background: #fff9e6;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+}
+
+.priority-note p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--gray-dark);
+  line-height: 1.6;
+}
+
+.btn-priority-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  margin-top: 1.5rem;
+}
+
+.btn-priority-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+}
+
+@media (max-width: 768px) {
+  .priority-service-section {
+    padding: 3rem 1rem;
+  }
+  
+  .priority-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .priority-title {
+    font-size: 1.5rem;
+  }
+  
+  .priority-main-text {
+    font-size: 1rem;
+  }
+  
+  .priority-details {
+    padding: 1.5rem;
+  }
+  
+  .btn-priority-whatsapp {
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+}

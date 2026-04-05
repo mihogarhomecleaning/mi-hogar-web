@@ -352,6 +352,44 @@ const PostConstructionSection = () => {
   );
 };
 
+// Next-Day Priority Solutions Section (Express Service)
+const PriorityServiceSection = () => {
+  const whatsappUrl = "https://wa.me/14036791671?text=Hi!%20I'm%20interested%20in%20your%20Next-Day%20Priority%20Service%20starting%20after%206%3A00%20PM.%20Can%20you%20check%20availability%3F";
+  
+  return (
+    <section className="priority-service-section">
+      <div className="priority-content">
+        <h2 className="priority-title">Next-Day Priority Solutions 🏔️✨</h2>
+        <p className="priority-main-text">
+          Need a high-impact cleaning for tomorrow evening? We offer exclusive spots for priority services.
+        </p>
+        
+        <div className="priority-details">
+          <h3 className="priority-subtitle">Service Details</h3>
+          <ul className="priority-list">
+            <li><strong>Hours:</strong> Available starting from 6:00 PM</li>
+            <li><strong>Focus:</strong> 2 to 3-hour intensive sessions (Kitchen, Bathrooms, and Floors)</li>
+            <li><strong>Requirement:</strong> 24-hour minimum notice for organized, high-quality results</li>
+          </ul>
+        </div>
+        
+        <div className="priority-note">
+          <p>☀️ <em>Please note: Deep Cleaning services are performed during daylight hours only to ensure our highest standards.</em></p>
+        </div>
+        
+        <a 
+          href={whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-priority-whatsapp"
+        >
+          ⚡ Check Availability via WhatsApp
+        </a>
+      </div>
+    </section>
+  );
+};
+
 // New Footer Section
 const NewFooter = () => {
   return (
@@ -940,6 +978,7 @@ const HomePage = () => {
       <AirbnbPortfolioSection />
       <OfficePortfolioSection />
       <SofaPortfolioSection />
+      <PriorityServiceSection />
       <NewFooter />
     </div>
   );
