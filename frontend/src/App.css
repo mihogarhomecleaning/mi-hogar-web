@@ -1154,3 +1154,93 @@
     padding: 0.875rem 1.5rem;
   }
 }
+
+
+
+/* ===== TRUST BANNER (PAYMENT METHODS) ===== */
+.trust-banner {
+  background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+  padding: 3rem 2rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.trust-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trust-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--forest-dark);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+}
+
+.trust-subtext {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray-dark);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.payment-icon {
+  background: var(--white);
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.payment-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.payment-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--forest-dark);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .trust-banner {
+    padding: 2rem 1rem;
+  }
+  
+  .trust-heading {
+    font-size: 1.2rem;
+  }
+  
+  .trust-subtext {
+    font-size: 0.9rem;
+  }
+  
+  .payment-icons {
+    gap: 1rem;
+  }
+  
+  .payment-icon {
+    padding: 0.75rem 1rem;
+  }
+  
+  .payment-label {
+    font-size: 0.85rem;
+  }
+}

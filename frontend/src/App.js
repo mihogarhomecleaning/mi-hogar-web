@@ -390,20 +390,39 @@ const PriorityServiceSection = () => {
   );
 };
 
+// Trust Banner Section (Payment Methods)
+const TrustBanner = () => {
+  return (
+    <section className="trust-banner">
+      <div className="trust-content">
+        <h3 className="trust-heading">Convenient & Secure Payments for Your Peace of Mind</h3>
+        <p className="trust-subtext">
+          We accept Interac E-transfer, Credit Cards (Visa/Mastercard), and Cash for all your cleaning projects in the Bow Valley.
+        </p>
+        <div className="payment-icons">
+          <div className="payment-icon">
+            <span className="payment-label">Interac</span>
+          </div>
+          <div className="payment-icon">
+            <span className="payment-label">Visa</span>
+          </div>
+          <div className="payment-icon">
+            <span className="payment-label">Mastercard</span>
+          </div>
+          <div className="payment-icon">
+            <span className="payment-label">Cash</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // New Footer Section
 const NewFooter = () => {
   return (
     <footer className="new-footer">
       <div className="footer-columns">
-        {/* Logo Column */}
-        <div className="footer-col">
-          <img 
-            src="https://customer-assets.emergentagent.com/job_web-builder-1191/artifacts/y0mq50rq_logo_sin_fondo-1-removebg-preview.png"
-            alt="Mi Hogar Home Cleaning"
-            className="footer-logo"
-          />
-        </div>
-
         {/* Contact Column */}
         <div className="footer-col">
           <h3 className="footer-col-title">CONTACT US</h3>
@@ -979,6 +998,7 @@ const HomePage = () => {
       <OfficePortfolioSection />
       <SofaPortfolioSection />
       <PriorityServiceSection />
+      <TrustBanner />
       <NewFooter />
     </div>
   );
