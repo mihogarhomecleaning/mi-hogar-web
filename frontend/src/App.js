@@ -352,6 +352,44 @@ const PostConstructionSection = () => {
   );
 };
 
+// Eco-Friendly Section
+const EcoFriendlySection = () => {
+  return (
+    <section className="eco-friendly-section">
+      <div className="eco-content">
+        <div className="eco-icon">
+          <svg viewBox="0 0 80 80" className="eco-leaf-icon" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 10 Q60 20 65 40 Q60 60 40 70 Q20 60 15 40 Q20 20 40 10 Z" fill="#4a7c59" opacity="0.2"/>
+            <path d="M40 15 Q25 25 20 40 Q30 55 40 65 L40 40 L60 30 Q50 20 40 15" fill="#2d5a3d"/>
+            <line x1="40" y1="40" x2="40" y2="65" stroke="#1a472a" strokeWidth="2"/>
+          </svg>
+        </div>
+        
+        <h2 className="eco-title">Eco-Friendly & Family Safe 🌿🐾</h2>
+        
+        <p className="eco-text">
+          We care about the Bow Valley as much as you do. That's why we prioritize high-quality, biodegradable, and non-toxic cleaning products.
+        </p>
+        
+        <div className="eco-benefits">
+          <div className="eco-benefit-item">
+            <span className="eco-check">✓</span>
+            <span>Safe for kids and pets</span>
+          </div>
+          <div className="eco-benefit-item">
+            <span className="eco-check">✓</span>
+            <span>No harsh chemical smells</span>
+          </div>
+          <div className="eco-benefit-item">
+            <span className="eco-check">✓</span>
+            <span>Protecting our mountain environment</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // Next-Day Priority Solutions Section (Express Service)
 const PriorityServiceSection = () => {
   const whatsappUrl = "https://wa.me/14036791671?text=Hi!%20I'm%20interested%20in%20your%20Next-Day%20Priority%20Service%20starting%20after%206%3A00%20PM.%20Can%20you%20check%20availability%3F";
@@ -1021,6 +1059,7 @@ const HomePage = () => {
       <AirbnbPortfolioSection />
       <OfficePortfolioSection />
       <SofaPortfolioSection />
+      <EcoFriendlySection />
       <PriorityServiceSection />
       <TrustBanner />
       <NewFooter />
