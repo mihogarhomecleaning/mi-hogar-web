@@ -14,6 +14,40 @@
   --white: #ffffff;
 }
 
+/* ===== TIDIO CHAT WIDGET REPOSITIONING ===== */
+/* Move Tidio chat to bottom-left to avoid conflict with WhatsApp/Emergent buttons */
+#tidio-chat,
+#tidio-chat-iframe,
+div[id^="tidio"],
+iframe[id*="tidio"] {
+  bottom: 20px !important;
+  left: 20px !important;
+  right: auto !important;
+}
+
+/* Ensure Tidio container stays on the left */
+#tidio-chat-code {
+  bottom: 20px !important;
+  left: 20px !important;
+  right: auto !important;
+}
+
+/* Mobile adjustment for Tidio */
+@media (max-width: 768px) {
+  #tidio-chat,
+  #tidio-chat-iframe,
+  div[id^="tidio"],
+  iframe[id*="tidio"] {
+    bottom: 15px !important;
+    left: 15px !important;
+  }
+  
+  #tidio-chat-code {
+    bottom: 15px !important;
+    left: 15px !important;
+  }
+}
+
 /* ===== Base Styles ===== */
 .home-page,
 .page-container {
