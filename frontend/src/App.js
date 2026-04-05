@@ -369,8 +369,11 @@ const PriorityServiceSection = () => {
           <ul className="priority-list">
             <li><strong>Hours:</strong> Available starting from 6:00 PM</li>
             <li><strong>Focus:</strong> 2 to 3-hour intensive sessions (Kitchen, Bathrooms, and Floors)</li>
-            <li><strong>Requirement:</strong> 24-hour minimum notice for organized, high-quality results</li>
+            <li><strong>Requirement:</strong> 24-hour minimum notice and subject to confirmed availability for organized, high-quality results</li>
           </ul>
+          <p className="priority-footer-note">
+            <em>All after-hours services must be confirmed directly by our team to secure your spot.</em>
+          </p>
         </div>
         
         <div className="priority-note">
