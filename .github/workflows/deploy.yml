@@ -40,6 +40,11 @@ jobs:
         env:
           CI: false
           REACT_APP_BACKEND_URL: ${{ secrets.REACT_APP_BACKEND_URL }}
+          PUBLIC_URL: ${{ github.event.repository.name }}
+      
+      - name: Add .nojekyll file
+        working-directory: ./frontend/build
+        run: touch .nojekyll
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
