@@ -136,15 +136,15 @@ const HeroSection = () => {
       </div>
       <div className="hero-content-new">
         <h1 className="hero-main-title">
-          MI HOGAR HOME CLEANING
+          MI HOGAR - HOME CLEANING
         </h1>
         <h2 className="hero-sub-title">
-          YOUR CANMORE DEEP CLEANING EXPERTS
+          Thoughtful Cleaning for Your Personal Sanctuary
         </h2>
         <p className="hero-tagline">
-          Local, Family-Owned Service
+          As a local, family-owned business, we believe a home deserves more than just a quick walkthrough. We take the time to understand your needs, providing a dedicated service focused on care and consistency. Your comfort is our personal priority.
         </p>
-        <Link to="/quote" className="btn-hero-cta">GET A QUOTE</Link>
+        <Link to="/quote" className="btn-hero-cta">REQUEST A PERSONALIZED QUOTE</Link>
       </div>
     </section>
   );
